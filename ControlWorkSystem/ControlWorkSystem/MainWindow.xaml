@@ -1,0 +1,38 @@
+﻿<Window x:Class="ControlWorkSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ControlWorkSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="390" Padding="10" Margin="10">
+            <StackPanel>
+                <TextBox Name="count"
+                    materialDesign:HintAssist.Hint="Введите количество"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10" />
+                <Button Name="intiArray" Content="Создать массив" Width="150" Margin="20" Click="InitArrayButton"/>
+            </StackPanel>
+        </materialDesign:Card>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="1" Height="390" Padding="10" Margin="10">
+            <StackPanel>
+                <TextBox Name="nameAuthor"
+                    materialDesign:HintAssist.Hint="Введите имя автора"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10" />
+                <TextBox Name="nameBook"
+                    materialDesign:HintAssist.Hint="Введите название книги"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10" />
+                <TextBox Name="price"
+                    materialDesign:HintAssist.Hint="Введите стоимость книги"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10" />
+                <Button Name="save" Content="Сохранить" Width="150" Margin="20" Click="SaveToDatabaseButton"/>
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>
